@@ -12,6 +12,8 @@
   align-items: center;
   padding: 5px;
   margin-bottom: 10px;
+  position: relative;
+  top: 0;
 }
 
 .header .trybewarts-header-logo {
@@ -51,10 +53,14 @@
 #footer-content {
   display: flex;
   justify-content: center;
+
   color: rgb(234, 237, 240);
   background-color: rgb(50, 167, 145);
-  position: absolute;
+
+  position: relative;
   bottom: 0;
   width: 100%;
+
   padding: 10px;
+  
 }
