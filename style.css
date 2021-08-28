@@ -27,6 +27,9 @@
 .trybewarts-login {
   display: flex;
 }
+.trybewarts-login input {
+  margin: 0 3px;
+}
 
 #main-content {
   display: flex;
@@ -62,5 +65,4 @@
   width: 100%;
 
   padding: 10px;
-  
 }
