@@ -4,6 +4,11 @@
   box-sizing: border-box;
 }
 
+body {
+  color: rgb(42, 40, 40);
+  background-color: rgb(234, 237, 240);
+}
+
 .header {
   display: flex;
   color: rgb(234, 237, 240);
@@ -27,6 +32,7 @@
 .trybewarts-login {
   display: flex;
 }
+
 .trybewarts-login input {
   margin: 0 3px;
 }
@@ -62,13 +68,10 @@
 #footer-content {
   display: flex;
   justify-content: center;
-
   color: rgb(234, 237, 240);
   background-color: rgb(50, 167, 145);
-
   position: relative;
   bottom: 0;
   width: 100%;
-
   padding: 10px;
 }
