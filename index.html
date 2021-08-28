@@ -47,23 +47,54 @@
         <h2 id="form-title">Formulário de Avaliação</h2>
 
         <form id="evaluation-form">
-          <div id="name-row">
-            <input id="input-name" type="text" placeholder="Nome" />
-            <input id="input-lastname" type="text" placeholder="Sobrenome" />
+          <div id="name-row" class="row">
+            <div class="col">
+              <input
+                id="input-name"
+                class="form-control"
+                type="text"
+                placeholder="Nome"
+              />
+            </div>
+            <div class="col">
+              <input
+                id="input-lastname"
+                class="form-control"
+                type="text"
+                placeholder="Sobrenome"
+              />
+            </div>
           </div>
 
-          <div id="email-house-row">
-            <input id="input-email" type="text" placeholder="Email" />
-            <select name="" id="house">
-              <option value="Gitnória" id="gitnoria-house">Gitnória</option>
-              <option value="Reactpuff" id="reactpuff-house">Reactpuff</option>
-              <option value="Corvinode" id="corvinode-house">Corvinode</option>
-              <option value="Pytherina" id="pytherina-house">Pytherina</option>
-            </select>
+          <div id="email-house-row" class="row">
+            <div class="col">
+              <input
+                id="input-email"
+                class="form-control"
+                type="text"
+                placeholder="Email"
+              />
+            </div>
+            <div class="col">
+              <select name="house" id="house" class="form-control">
+                <option value="Gitnória" id="gitnoria-house">Gitnória</option>
+                <option value="Reactpuff" id="reactpuff-house">
+                  Reactpuff
+                </option>
+                <option value="Corvinode" id="corvinode-house">
+                  Corvinode
+                </option>
+                <option value="Pytherina" id="pytherina-house">
+                  Pytherina
+                </option>
+              </select>
+            </div>
           </div>
 
           <div id="family-content">
-            <label id="label-family">Qual sua família?</label>
+            <label id="label-family" class="form-label"
+              >Qual sua família?</label
+            >
             <div>
               <input
                 class="form-check-input"
