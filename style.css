@@ -55,10 +55,23 @@ body {
   flex-direction: column;
 }
 
-.check-row {
+.learning-check-row {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.rate-row {
+  display: flex;
+  justify-content: space-between;
+}
+#textarea-content {
+  display: flex;
+  flex-direction: column;
+}
+
+#counter {
+  align-self: flex-end;
 }
 
 #trybewarts-forms-logo {
