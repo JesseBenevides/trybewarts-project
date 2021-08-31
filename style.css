@@ -45,8 +45,9 @@ body {
 
 #form-content {
   display: flex;
+  align-items: center;
   flex-direction: column;
-  padding: 10px;
+  padding: 20px;
 }
 
 #evaluation-form {
@@ -65,6 +66,7 @@ body {
   display: flex;
   justify-content: space-between;
 }
+
 #textarea-content {
   display: flex;
   flex-direction: column;
