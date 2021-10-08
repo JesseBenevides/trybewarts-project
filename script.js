@@ -101,39 +101,38 @@ function getFormData() {
 }
 
 function createDataElements() {
-  const formContent = document.getElementById('form-content')
+  const dataContent = document.createElement('div');
+  dataContent.id = 'data-content';
 
-  const dataContent = document.createElement('div')
-  dataContent.id = 'data-content'
-  dataContent.className = 'hidden'
+  const formData = getFormData();
+  const keys = Object.keys(formData);
+  const values = Object.values(formData);
 
-  const formData = getFormData()
-  const keys = Object.keys(formData)
-  const values = Object.values(formData)
-
-  for (const i in keys) {
-    const p = document.createElement('p')
-    p.innerText = `${keys[i]}: ${values[i]}`
-    dataContent.appendChild(p)
+  for (let i = 0; i < keys.length; i += 1) {
+    const p = document.createElement('p');
+    p.innerText = `${keys[i]}: ${values[i]}`;
+    dataContent.appendChild(p);
   }
 
-  formContent.appendChild(dataContent)
+  return dataContent;
 }
 
 function showData(event) {
-  event.preventDefault()
-  createDataElements()
+  event.preventDefault();
 
-  const form = document.getElementById('evaluation-form')
-  form.classList.add('hidden')
+  const data = createDataElements();
 
-  const data = document.getElementById('data-content')
-  data.classList.remove('hidden')
+  const form = document.getElementById('evaluation-form');
+  form.innerText = '';
+
+  form.appendChild(data);
 }
 
-createCount()
-document.getElementById('agreement').addEventListener('input', submeteForm)
-document.getElementById('textarea').addEventListener('input', countTextarea)
-document.getElementById('button-login').addEventListener('click', validateLogin)
-
-document.getElementById('submit-btn').addEventListener('click', showData)
+window.onload = () => {
+  createCount();
+  document.getElementById('agreement').addEventListener('input', submeteForm);
+  document.getElementById('textarea').addEventListener('input', countTextarea);
+  document.getElementById('button-login').addEventListener('click', validateLogin);
+  
+  document.getElementById('submit-btn').addEventListener('click', showData);
+}
